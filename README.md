@@ -1,10 +1,18 @@
-Use Docker 
+## Use Docker 
 
 ```bash
-docker-compose build
-docker-compose up
+$ docker-compose build
+$docker-compose up
 ```
 Access at 3001
+
+
+## Chat Features
+Built using socket.IO
+Can be Monitored via Postman
+
+listen on event (UserA and UserB)
+with eventName (UserA or UserB)
 
 ## Description
 
