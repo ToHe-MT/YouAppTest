@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:7.0
+    ports: 
+      - 27018:27017
+  youapp:
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - '3001:3001'
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/nest
+      - SECRET_KEY=YOUAPPKEY
+      - PORT=3001
+    depends_on:
+      - mongo
+volumes:
+  mongodata:
+    driver: local
